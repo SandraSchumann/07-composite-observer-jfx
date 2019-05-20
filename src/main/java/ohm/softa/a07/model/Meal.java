@@ -55,16 +55,16 @@ public class Meal {
 
 	public boolean isVegetarian() {
 		boolean containsMeat = false;
-		//for(String s : notes){
-		//	containsMeat = containsMeat || s.contains("fleisch") || s.contains("geflügel");
-		//}
+		for(String s : notes){
+			containsMeat = containsMeat || s.contains("fleisch");
+		}
 
-		if (this.category == "Vegan")
+		/*if (this.category == "Vegetarisch")
 			containsMeat = true;
 		else
-			containsMeat = false;
+			containsMeat = false;*/
 
-		return containsMeat;
+		return !containsMeat;
 	}
 
 	@Override
